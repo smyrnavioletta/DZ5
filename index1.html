@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 01</title>
+</head>
+
+<body>
+    <button>Click me!</button>
+    <script>
+         /*
+        Завдання:
+        Додайте для кнопки два обробники: один має спрацювати у фазі capturing, другий – у фазі bubbling.
+        */
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            let button = document.querySelector('button');
+
+            // Обработчик, срабатывающий в фазе capturing
+            button.addEventListener('click', function() {
+                console.log('Capturing phase');
+            }, true);
+
+            // Обработчик, срабатывающий в фазе bubbling
+            button.addEventListener('click', function() {
+                console.log('Bubbling phase');
+            }, false);
+        });
+    </script>
+</body>
+
+</html>
